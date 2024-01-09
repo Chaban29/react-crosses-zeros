@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/github.io/React-Crosses-Zeros/static/js/main.6caedf45.js",
-    "index.html": "/github.io/React-Crosses-Zeros/index.html",
-    "main.6caedf45.js.map": "/github.io/React-Crosses-Zeros/static/js/main.6caedf45.js.map"
+    "main.js": "/React-Crosses-Zeros/static/js/main.32d35a44.js",
+    "index.html": "/React-Crosses-Zeros/index.html",
+    "main.32d35a44.js.map": "/React-Crosses-Zeros/static/js/main.32d35a44.js.map"
   },
   "entrypoints": [
-    "static/js/main.6caedf45.js"
+    "static/js/main.32d35a44.js"
   ]
 }
