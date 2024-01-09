@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/React-Crosses-Zeros/static/js/main.32d35a44.js",
+    "main.css": "/React-Crosses-Zeros/static/css/main.f8ef0b56.css",
+    "main.js": "/React-Crosses-Zeros/static/js/main.f35bd48d.js",
     "index.html": "/React-Crosses-Zeros/index.html",
-    "main.32d35a44.js.map": "/React-Crosses-Zeros/static/js/main.32d35a44.js.map"
+    "main.f8ef0b56.css.map": "/React-Crosses-Zeros/static/css/main.f8ef0b56.css.map",
+    "main.f35bd48d.js.map": "/React-Crosses-Zeros/static/js/main.f35bd48d.js.map"
   },
   "entrypoints": [
-    "static/js/main.32d35a44.js"
+    "static/css/main.f8ef0b56.css",
+    "static/js/main.f35bd48d.js"
   ]
 }
