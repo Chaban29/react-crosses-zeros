@@ -1,6 +1,7 @@
 import Square from "../Square/Square";
 import React, { useState } from "react";
 import styled from "styled-components";
+import Button from "../Button/Button";
 
 const Container = styled.div`
   display: grid;
@@ -16,7 +17,7 @@ export default function Board() {
     if (calculateWinner[squares] || squares[index]) {
       return;
     }
-    const nextSquares = squares.slice();
+    const nextSquares = [...squares];
     if (xIsNext) {
       nextSquares[index] = "X";
     } else {
@@ -60,6 +61,13 @@ export default function Board() {
     status = "Next Player: " + (xIsNext ? "X" : "O");
   }
 
+  const handleResetGame = () => {
+    const nextSquares = [...squares];
+    if (nextSquares) {
+      setSquares([]);
+    }
+  };
+
   return (
     <>
       <h3>{status}</h3>
@@ -74,6 +82,11 @@ export default function Board() {
         <Square onSquareClick={() => handleClick(7)} value={squares[7]} />
         <Square onSquareClick={() => handleClick(8)} value={squares[8]} />
       </Container>
+      <div>
+        <Button type="button" onClick={handleResetGame}>
+          Reset Game
+        </Button>
+      </div>
     </>
   );
 }
