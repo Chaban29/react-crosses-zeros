@@ -1,7 +1,7 @@
-import Square from "../Square/Square";
-import React, { useState } from "react";
-import styled from "styled-components";
-import Button from "../Button/Button";
+import Square from '../Square/Square';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import Button from '../Button/Button';
 
 const Container = styled.div`
   display: grid;
@@ -9,7 +9,7 @@ const Container = styled.div`
   grid-template-rows: repeat(3, 50px);
 `;
 
-export default function Board() {
+export const Board = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
 
@@ -19,25 +19,26 @@ export default function Board() {
     }
     const nextSquares = [...squares];
     if (xIsNext) {
-      nextSquares[index] = "X";
+      nextSquares[index] = 'X';
     } else {
-      nextSquares[index] = "O";
+      nextSquares[index] = 'O';
     }
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   };
 
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
   const calculateWinner = (squares) => {
-    const lines = [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-      [0, 4, 8],
-      [2, 4, 6],
-    ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (
@@ -56,9 +57,9 @@ export default function Board() {
   let status;
 
   if (winner) {
-    status = "Winner " + winner;
+    status = 'Winner ' + winner;
   } else {
-    status = "Next Player: " + (xIsNext ? "X" : "O");
+    status = 'Next Player: ' + (xIsNext ? 'X' : 'O');
   }
 
   const handleResetGame = () => {
@@ -83,10 +84,10 @@ export default function Board() {
         <Square onSquareClick={() => handleClick(8)} value={squares[8]} />
       </Container>
       <div>
-        <Button type="button" onClick={handleResetGame}>
+        <Button type='button' onClick={handleResetGame}>
           Reset Game
         </Button>
       </div>
     </>
   );
-}
+};
