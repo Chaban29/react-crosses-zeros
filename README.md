@@ -1,4 +1,4 @@
-**Tic-Tac-Toe Game**
+<h1>Tic-Tac-Toe Game<h1/>
 Overview
 Tic-Tac-Toe, also known as Noughts and Crosses, is a classic two-player game where the objective is to form a straight line of three of one's own marks in a 3x3 grid. The game is simple yet offers strategic depth and is a great introduction to basic game theory and AI algorithms.
 
